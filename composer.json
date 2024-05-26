@@ -1,0 +1,13 @@
+{
+    "name": "daw/proyecto",
+    "description": "proyecto",
+    "type": "project",
+    "license": "glp",
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
