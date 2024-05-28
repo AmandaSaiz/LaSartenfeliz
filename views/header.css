@@ -4,6 +4,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background-color: #fdebd0;
+}
+
 /* Estilo de la parte de arriba del encabezado*/
 .top-header-container {
     display: flex;
@@ -11,6 +15,7 @@
     align-items: center;
     padding: 10px 20px;
     background-color: #4f943c;
+    background: linear-gradient(to bottom, #4f943c, #eb7c41);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,6 +81,9 @@
 .search-bar button i {
     font-size: 18px;
 }
+.search-bar button:hover {
+    background-color: #b9540c;
+}
 
 /*Login*/
 .login-icon a {
@@ -92,8 +100,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-top: 5px solid #ed7737;
-    border-bottom: 5px solid #ed7737;
+    border-bottom: 2px solid #eb7c41;
 }
 
 
@@ -102,19 +109,23 @@
     margin-left: 20px;
 }
 .logo img {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 /* Titulo de la página */
 .page-title {
-    flex: 1;
-    text-align: center;
-    font-size: larger;
+    display: flex;               
+    justify-content: center;   
+    align-items: center;       
+    height: 100px;             
+    margin: 0 auto;            
+}
+.page-title h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6em; 
     color: #b9540c;
-    font-family: "Sevillana", cursive;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: lighter;
 }
 
 /*Estilo de las rutas de navegación*/
@@ -124,7 +135,7 @@
 }
 .breadcrumbs a {
     text-decoration: none;
-    color: #b9540c;
+    color: #367026;
 }
 .breadcrumbs a:hover {
     text-decoration: underline;

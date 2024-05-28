@@ -1,0 +1,73 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos del mensaje de bienvenida */
+.welcome-message {
+    display: flex;
+    flex: inline;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #4f943c;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-message h2 {
+    color: #4f943c;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.welcome-message p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.welcome-message img {
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+/* Estilos de las categorías de recetas */
+.recipe-categories-container h2 {
+    margin-bottom: 10px;
+}
+
+.recipe-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.category {
+    text-align: center;
+}
+
+.category img {
+    max-width: 150px;
+    border-radius: 10px;
+}
+
+.category a {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Estilos de la receta más popular */
+.popular-recipe {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}

@@ -64,7 +64,7 @@ body {
 }
 
 .information-childs input:hover {
-    background-color: #00fe0db3;
+    opacity: 0.8;
     border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
 }
@@ -179,6 +179,19 @@ body {
 
 .form .error {
     outline: solid 2px #9d2222;
+}
+
+/* Estilos para el botón de vuelta */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    color: #4f943c;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    color: #ed7737;
 }
 
 /* Formulario Responsive */

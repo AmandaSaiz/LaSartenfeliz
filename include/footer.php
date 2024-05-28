@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Sartén Feliz</title>
-    <link rel="stylesheet" type="text/css" href="../views/footer.css">
+    <link rel="stylesheet" type="text/css" href="../views/footer.css?v=1.0">
 </head>
 
 <body>
@@ -14,8 +14,8 @@
     <footer>
         <div class="top-footer">
             <div class="div-left">
-                <a href="nuevaReceta.php">Subir Receta</a>
                 <a href="login.html">Registrate</a>
+                <a href="../public/construccion.php">Subir Receta</a>
             </div>
             <div class="divider"></div>
             <div class="div-center">
@@ -23,14 +23,14 @@
             </div>
             <div class="divider"></div>
             <div class="div-right">
-                <a href="">Aviso de privacidad</a>
-                <a href="">Políticas de Uso del Sitio Web</a>
-                <a href="contacto.php">Contacto</a>
+                <a href="../public/contacto.php">Contacto</a>
+                <a href="../public/construccion.php">Aviso de privacidad</a>
+                <a href="../public/construccion.php">Políticas de Uso del Sitio Web</a>
             </div>
         </div>
         <div class="bottom-footer">
             <div class="creator">
-                Página creada por Amanda Saiz Allende. Proyecto de Desarrollo web 2024.
+            © Página creada por Amanda Saiz Allende. Proyecto de Desarrollo web 2024.
             </div>
         </div>
     </footer>
