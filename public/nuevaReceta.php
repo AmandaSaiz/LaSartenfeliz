@@ -63,10 +63,11 @@
         </form>
     </main>
 
-
     <?php
     include '../src/footer.php';
     ?>
+    <!-- Funcionalidad de los botones del formulario -->
+    <script src="../src/funcionalidadNuevaReceta.js"></script>
 </body>
 
 </html>
