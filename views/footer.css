@@ -54,3 +54,20 @@ a:hover {
 .creator {
     font-size: 12px;
 }
+
+/* Estilo responsive para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    .top-footer {
+        flex-direction: column; 
+    }
+
+    .divider {
+        display: none; 
+    }
+
+    .div-left,
+    .div-center,
+    .div-right {
+        flex: none;
+    }
+}

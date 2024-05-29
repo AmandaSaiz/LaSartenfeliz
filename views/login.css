@@ -194,16 +194,10 @@ body {
     color: #ed7737;
 }
 
-/* Formulario Responsive */
-@media screen and (max-width:750px) {
+/* Estilo responsive para pantallas más pequeñas */
+@media screen and (max-width:600px) {
     html {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width:580px) {
-    html {
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .container-form {

@@ -19,17 +19,24 @@ CREATE TABLE IF NOT EXISTS recetas (
     duracion_preparacion INT,
     categoria VARCHAR(50) NOT NULL, 
     usuario_id INT,
-    cantidad_ingrediente INT NOT NULL,
-	medida_ingrediente VARCHAR(20) NOT NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
 
--- Tabla de ingredientes de recetas
+-- Tabla de ingredientes
 CREATE TABLE IF NOT EXISTS ingredientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
+    nombre VARCHAR(100) NOT NULL
+);
+
+-- Tabla intermedia entre recetas e ingredientes
+CREATE TABLE IF NOT EXISTS receta_ingredientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     receta_id INT,
-    FOREIGN KEY (receta_id) REFERENCES recetas(id)
+    ingrediente_id INT,
+    cantidad INT NOT NULL,
+    medida VARCHAR(20) NOT NULL,
+    FOREIGN KEY (receta_id) REFERENCES recetas(id),
+    FOREIGN KEY (ingrediente_id) REFERENCES ingredientes(id)
 );
 
 -- Tabla de pasos de recetas

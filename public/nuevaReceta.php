@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../views/contacto.css?v=1.2">
-    <title>La Sarten Feliz</title>
+    <link rel="stylesheet" type="text/css" href="../views/nuevaReceta.css?v=1.0">
+    <title>La Sartén Feliz</title>
 </head>
 
 <body>
@@ -14,10 +14,9 @@
     include '../src/breadcrumbs.php';
     include '../src/header.php';
     ?>
-
-<main>
-        <h1>Añadir Nueva Receta</h1>
+    <main>
         <form action="creacionReceta.php" method="POST">
+            <h1>Nueva Receta</h1>
             <div>
                 <label for="titulo">Título de la Receta:</label>
                 <input type="text" id="titulo" name="titulo" required>
@@ -32,35 +31,38 @@
             </div>
             <div>
                 <label for="categoria">Categoría:</label>
-                <input type="text" id="categoria" name="categoria" required>
-            </div>
-            <div>
-                <label for="cantidad_ingrediente">Cantidad del Ingrediente Principal:</label>
-                <input type="number" id="cantidad_ingrediente" name="cantidad_ingrediente" required>
-            </div>
-            <div>
-                <label for="medida_ingrediente">Medida del Ingrediente Principal:</label>
-                <input type="text" id="medida_ingrediente" name="medida_ingrediente" required>
+                <select id="categoria" name="categoria" required>
+                    <option value="entrantes">Entrantes</option>
+                    <option value="plato principal">Plato Principal</option>
+                    <option value="postre">Postre</option>
+                    <option value="coctel">Coctel</option>
+                </select>
             </div>
             <div id="ingredientes">
                 <h2>Ingredientes</h2>
                 <div class="ingrediente">
                     <label for="ingrediente_nombre[]">Nombre del Ingrediente:</label>
                     <input type="text" name="ingrediente_nombre[]" required>
-                    <button type="button" onclick="agregarIngrediente()">Añadir otro ingrediente</button>
+                    <label for="cantidad_ingrediente[]">Cantidad:</label>
+                    <input type="number" name="cantidad_ingrediente[]" required>
+                    <label for="medida_ingrediente[]">Medida:</label>
+                    <input type="text" name="medida_ingrediente[]" required>
+                    <button type="button" onclick="agregarIngrediente()">Añadir ingrediente</button>
                 </div>
             </div>
             <div id="pasos">
                 <h2>Pasos</h2>
                 <div class="paso">
-                    <label for="paso_descripcion[]">Descripción del Paso:</label>
+                    <label for="paso_descripcion[]">Descripción de los pasos a seguir:</label>
                     <textarea name="paso_descripcion[]" required></textarea>
-                    <button type="button" onclick="agregarPaso()">Añadir otro paso</button>
+                    <button type="button" onclick="agregarPaso()">Añadir paso</button>
                 </div>
             </div>
-            <button type="submit">Guardar Receta</button>
+            <button type="submit">Guardar</button>
+            <button type="reset">Limpiar</button>
         </form>
     </main>
+
 
     <?php
     include '../src/footer.php';
