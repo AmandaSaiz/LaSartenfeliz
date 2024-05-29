@@ -2,8 +2,8 @@
 <html lang="en">
 <?php
 require '../vendor/autoload.php';
-include '../include/breadcrumbs.php';
-include '../include/header.php';
+include '../src/breadcrumbs.php';
+include '../src/header.php';
 ?>
 
 <head>
@@ -64,7 +64,7 @@ include '../include/header.php';
 </body>
 
 <?php
-include '../include/footer.php';
+include '../src/footer.php';
 ?>
 
 </html>

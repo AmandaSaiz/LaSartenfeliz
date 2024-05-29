@@ -12,8 +12,8 @@
 <body>
     <?php
     require '../vendor/autoload.php';
-    include '../include/breadcrumbs.php';
-    include '../include/header.php';
+    include '../src/breadcrumbs.php';
+    include '../src/header.php';
     ?>
 
     <main>
@@ -26,13 +26,13 @@
                     Vuelve pronto para descubrir todas las novedades que estamos preparando.</p>
                 <br>
                 <p>Mientras tanto, si tienes alguna pregunta o necesitas asistencia, no dudes en <a href="contacto.php">contactarnos</a>, 
-                o tambíen puedes volver a la <a href="../public/index.php">página de inicio</a>.</p>
+                o tambíen puedes volver a la <a href="index.php">página de inicio</a>.</p>
             </div>
         </div>
     </main>
 
     <?php
-    include '../include/footer.php';
+    include '../src/footer.php';
     ?>
 </body>
 

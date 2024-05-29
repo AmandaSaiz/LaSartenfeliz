@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../views/contacto.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="../views/contacto.css?v=1.2">
     <title>La Sarten Feliz</title>
 </head>
 
 <body>
     <?php
     require '../vendor/autoload.php';
-    include '../include/breadcrumbs.php';
-    include '../include/header.php';
+    include '../src/breadcrumbs.php';
+    include '../src/header.php';
     ?>
 
     <main>
@@ -34,7 +34,7 @@
     </main>
 
     <?php
-    include '../include/footer.php';
+    include '../src/footer.php';
     ?>
 </body>
 
