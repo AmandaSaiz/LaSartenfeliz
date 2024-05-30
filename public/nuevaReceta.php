@@ -10,11 +10,17 @@
 
 <body>
     <?php
+    session_start();
+    if (!isset($_SESSION['usuario_id'])) {
+        $_SESSION['message'] = ['type' => 'warning', 'text' => 'Debes iniciar sesión para crear una receta'];
+    }
+
     require '../vendor/autoload.php';
     include '../src/breadcrumbs.php';
     include '../src/header.php';
     ?>
     <main>
+        <div id="message-container"></div>
         <form action="creacionReceta.php" method="POST">
             <h1>Nueva Receta</h1>
             <div>

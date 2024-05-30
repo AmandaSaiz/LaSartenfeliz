@@ -14,7 +14,7 @@
         <div class="top-footer">
             <div class="div-left">
                 <a href="login.php">Registrate</a>
-                <a href="../public/construccion.php">Subir Receta</a>
+                <a href="nuevaReceta.php">Subir Receta</a>
             </div>
             <div class="divider"></div>
             <div class="div-center">

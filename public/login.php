@@ -13,7 +13,7 @@
     <!-- Import de iconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="../views/login.css?v=1.0" />
-    <title>La Sarten Feliz</title>
+    <title>La Sartén Feliz</title>
 </head>
 
 <body>

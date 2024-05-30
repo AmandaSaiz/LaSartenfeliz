@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../views/contacto.css?v=1.2">
-    <title>La Sarten Feliz</title>
+    <link rel="stylesheet" type="text/css" href="../views/contacto.css?v=1.3">
+    <title>La Sartén Feliz</title>
 </head>
 
 <body>
