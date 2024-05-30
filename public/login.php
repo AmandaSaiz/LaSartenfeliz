@@ -29,7 +29,7 @@
         <div class="form-information">
             <div class="form-information-childs">
                 <h2>Crear una Cuenta</h2>
-                <form class="form form-register" method="post" action="../include/FuncionesRegistro.php" novalidate>
+                <form class="form form-register" method="post" action="../src/funcionesRegistro.php" novalidate>
 
                     <div>
                         <label>
@@ -76,7 +76,7 @@
             <div class="form-information-childs">
                 <h2>Iniciar Sesión</h2>
 
-                <form class="form form-login" method="post" action="" novalidate>
+                <form class="form form-login" method="post" action="../src/funcionesLogin.php" novalidate>
                     <div>
                         <label>
                             <i class='bx bx-user'></i>

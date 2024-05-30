@@ -11,6 +11,7 @@
 
 <body>
     <?php
+    session_start();
     require '../vendor/autoload.php';
     include '../src/breadcrumbs.php';
     include '../src/header.php';
