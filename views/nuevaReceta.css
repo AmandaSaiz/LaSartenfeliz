@@ -77,6 +77,24 @@ form button:hover {
     opacity: 0.7;
 }
 
+#message-container {
+    left: 50%;
+    width: 300px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.success { background-color: #4CAF50; }
+.error { background-color: #f44336; }
+.warning { background-color: #eb7c41; }
+
+
 /* Estilo responsive para pantallas más pequeñas */
 @media (max-width: 600px) {
     form {

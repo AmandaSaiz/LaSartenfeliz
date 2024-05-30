@@ -2,6 +2,8 @@
 session_start();
 if (!isset($_SESSION['usuario_id'])) {
     $_SESSION['message'] = ['type' => 'warning', 'text' => 'Debes iniciar sesión para crear una receta'];
+    header("Location: ../views/nuevaReceta.php"); 
+    exit();
 }
 
 require '../vendor/autoload.php';
