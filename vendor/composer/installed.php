@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'daw/proyecto',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '66d79387126eb9523a1b904c49e85d9b724fda13',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'daw/proyecto' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '66d79387126eb9523a1b904c49e85d9b724fda13',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

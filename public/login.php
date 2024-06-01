@@ -101,10 +101,10 @@
         </div>
     </div>
 
-    <!-- Imports para la implementación de las funcionalidades -->
-    <script type="module" src="../src/funcionalidadLogin.js"></script>
+    <!-- Imports para la implementación de las funcionalidades 
     <script type="module" src="../validaciones/validacionRegistro.js"></script>
-    <script type="module" src="../validaciones/validacionLogin.js"></script>
+    <script type="module" src="../validaciones/validacionLogin.js"></script>-->
+    <script type="module" src="../src/funcionalidadLogin.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     "license": "glp",
     "autoload": {
         "psr-4": {
-            "Clases\\": "src/"
+            "Clases\\": "include/"
         }
     },
     "minimum-stability": "stable",

@@ -2,6 +2,9 @@
 
 namespace Clases;
 
+use PDO;
+use PDOException;
+
 class Receta extends Conexion
 {
     public function __construct()
@@ -28,7 +31,7 @@ class Receta extends Conexion
                 'usuario_id' => $usuario_id
             ));
             return $this->conexion->lastInsertId();
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             exit($e->getMessage());
         }
     }
@@ -62,7 +65,7 @@ class Receta extends Conexion
                 'medida' => $medida
             ));
             return $stmt->rowCount();
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             exit($e->getMessage());
         }
     }
@@ -84,7 +87,7 @@ class Receta extends Conexion
                 'receta_id' => $receta_id
             ));
             return $stmt->rowCount();
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             exit($e->getMessage());
         }
     }

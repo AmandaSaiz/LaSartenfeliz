@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Clases\\' => array($baseDir . '/src'),
+    'Clases\\' => array($baseDir . '/include'),
 );
