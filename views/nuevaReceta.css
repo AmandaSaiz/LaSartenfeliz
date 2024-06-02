@@ -79,40 +79,38 @@ form button:hover {
     opacity: 0.7;
 }
 
-#message-container {
-    left: 50%;
-    width: 300px;
-    padding: 10px;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
+.error-message {
+    color: #9d2222;
+    font-size: 0.875em;
+    margin-top: 5px;
+    display: block;
 }
 
-.message {
-    margin-bottom: 10px;
+.error-input {
+    border-color: #9d2222;
 }
 
-.success { background-color: #4CAF50; }
-.error { background-color: #f44336; }
-.warning { background-color: #eb7c41; }
-
+.error-container {
+    margin-top: 5px;
+    min-height: 1.2em;
+}
 
 /* Estilo responsive para pantallas más pequeñas */
 @media (max-width: 600px) {
     form {
-        width: 90%; 
-        padding: 15px; 
+        width: 90%;
+        padding: 15px;
     }
 
     form h1 {
-        font-size: 2em; 
+        font-size: 2em;
     }
 
     form input[type="text"],
     form input[type="number"],
     form textarea,
     form select {
-        padding: 8px; 
+        padding: 8px;
     }
 
     form button {
@@ -121,13 +119,13 @@ form button:hover {
 
     form button[type="submit"],
     form button[type="reset"] {
-        width: 100%; 
-        margin-right: 0; 
+        width: 100%;
+        margin-right: 0;
         margin-top: 10px;
     }
 
-    .ingrediente, .paso {
-        margin-bottom: 10px; 
+    .ingrediente,
+    .paso {
+        margin-bottom: 10px;
     }
 }
-

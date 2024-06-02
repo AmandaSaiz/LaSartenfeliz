@@ -1,33 +1,3 @@
-
-document.addEventListener("DOMContentLoaded", function () {
-    var messageContainer = document.getElementById('message-container');
-    showMessage();
-
-    function showMessage() {
-        // Obtener el mensaje de error o exito de la sesión
-        var message = "<?php echo isset($_SESSION['message']) ? json_encode($_SESSION['message']) : null ?>";
-
-        if (message) {
-            message = JSON.parse(message);
-            var type = message.type;
-            var text = message.text;
-
-            var messageElement = document.createElement('div');
-            messageElement.className = 'message ' + type;
-            messageElement.textContent = text;
-
-            messageContainer.appendChild(messageElement);
-
-            setTimeout(function () {
-                messageElement.style.opacity = '0';
-                setTimeout(function () {
-                    messageElement.remove();
-                }, 1000);
-            }, 5000);
-        }
-    } 
-});
-
 // Función para agregar un nuevo campo de ingrediente al formulario de forma dinámica
 function agregarIngrediente() {
     var ingredienteDiv = document.createElement('div');

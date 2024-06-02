@@ -10,22 +10,21 @@
 
 <body>
     <?php
-    // if (!isset($_SESSION['userName'])) {
-    //     echo "<script>
-    //         alert('Debes iniciar sesión para poder subir nuevas recetas a la página.');
-    //         window.location.href = 'index.php';
-    //       </script>";
-    //     exit();
-    // }
-
-
     require '../vendor/autoload.php';
     include '../src/breadcrumbs.php';
     include '../src/header.php';
+
+    if (!isset($_SESSION['userName'])) {
+        echo "<script>
+            alert('Debes iniciar sesión para poder subir nuevas recetas a la página.');
+            window.location.href = 'index.php';
+          </script>";
+        exit();
+    }
     ?>
     <main>
         <div id="message-container"></div>
-        <form action="creacionReceta.php" method="POST">
+        <form action="../src/creacionReceta.php" method="POST">
             <h1>Nueva Receta</h1>
             <div>
                 <label for="titulo">Título de la Receta:</label>
@@ -78,6 +77,7 @@
     ?>
     <!-- Funcionalidad de los botones del formulario -->
     <script src="../src/funcionalidadNuevaReceta.js"></script>
+    <script src="../validaciones/validacionReceta.js"></script>
 </body>
 
 </html>

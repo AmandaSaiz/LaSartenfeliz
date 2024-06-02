@@ -38,24 +38,29 @@ class Receta extends Conexion
 
     public function insertIngredienteReceta($receta_id, $nombre_ingrediente, $cantidad, $medida)
     {
-        /* Preobamos a inserar el nuevo ingrediente, si este ya existe se recoge su id para que no se duplique 
-         y se pueda usar el mismo ingrediente en varias recetas */
-        $query = "
-            INSERT INTO ingredientes (nombre) VALUES (:nombre) 
-            ON DUPLICATE KEY UPDATE id=LAST_INSERT_ID(id);
-        ";
-
+        // Comprobacion de la existencia del nombre de ingrediente en la base de datos de ingrediente
+        $query = "SELECT id FROM ingredientes WHERE nombre = :nombre";
         try {
             $stmt = $this->conexion->prepare($query);
             $stmt->execute(array('nombre' => $nombre_ingrediente));
-            $ingrediente_id = $this->conexion->lastInsertId();
+            $ingrediente = $stmt->fetch(PDO::FETCH_ASSOC);
 
+            if ($ingrediente) {
+                $ingrediente_id = $ingrediente['id'];
+            } else {
+                $query = "INSERT INTO ingredientes (nombre) VALUES (:nombre)";
+                $stmt = $this->conexion->prepare($query);
+                $stmt->execute(array('nombre' => $nombre_ingrediente));
+                $ingrediente_id = $this->conexion->lastInsertId();
+            }
+
+            // Insertamos la relación en la tabla receta_ingredientes
             $query = "
-                INSERT INTO receta_ingredientes 
-                    (receta_id, ingrediente_id, cantidad, medida)
-                VALUES
-                    (:receta_id, :ingrediente_id, :cantidad, :medida);
-            ";
+            INSERT INTO receta_ingredientes 
+                (receta_id, ingrediente_id, cantidad, medida)
+            VALUES
+                (:receta_id, :ingrediente_id, :cantidad, :medida);
+        ";
 
             $stmt = $this->conexion->prepare($query);
             $stmt->execute(array(
@@ -92,4 +97,3 @@ class Receta extends Conexion
         }
     }
 }
-?>
