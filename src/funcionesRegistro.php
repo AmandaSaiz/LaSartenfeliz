@@ -4,22 +4,22 @@ require '../vendor/autoload.php';
 use Clases\Usuario;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST['userName'];
-    $email = $_POST['userEmail'];
-    $contrasena = $_POST['userPassword'];
+    $nombre = trim($_POST['userName']);
+    $email = trim($_POST['userEmail']);
+    $contrasena = trim($_POST['userPassword']);
     $usuario = new Usuario();
 
     $registroExitoso = $usuario->registrarUsuario($nombre, $email, $contrasena);
     
     if ($registroExitoso) {
         echo "<script>
-                alert('Te registraste correctamente');
-                window.location.href = '../public/index.php';
+                alert('Te registraste correctamente, inicia sesión para aprovechar las ventajas.');
+                window.location.href = '../public/login.php';
               </script>";
     } else {
         echo "<script>
                 alert('El usuario o correo electrónico ya están registrados. Por favor, intenta con otros datos.');
-                window.location.href = 'registro.php';
+                window.location.href = '../public/login.php';
               </script>";
     }
 }

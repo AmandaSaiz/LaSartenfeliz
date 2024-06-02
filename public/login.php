@@ -54,7 +54,6 @@
 
                     <input type="submit" value="Registrarse">
                     <div class="alerta-error">Todos los campos son obligatorios</div>
-                    <div class="alerta-exito">Te registraste correctamente</div>
 
                     <a href="index.php" class="back-button">Quiero volver a la página sin registrarme...</a>
                 </form>
@@ -93,7 +92,6 @@
 
                     <input type="submit" value="Iniciar Sesión">
                     <div class="alerta-error">Todos los campos son obligatorios</div>
-                    <div class="alerta-exito">Te registraste correctamente</div>
 
                     <a href="index.php" class="back-button">No quiero iniciar sesión ahora...</a>
                 </form>
@@ -101,9 +99,9 @@
         </div>
     </div>
 
-    <!-- Imports para la implementación de las funcionalidades 
+    <!-- Imports para la implementación de las funcionalidades -->
     <script type="module" src="../validaciones/validacionRegistro.js"></script>
-    <script type="module" src="../validaciones/validacionLogin.js"></script>-->
+    <script type="module" src="../validaciones/validacionLogin.js"></script>
     <script type="module" src="../src/funcionalidadLogin.js"></script>
 </body>
 

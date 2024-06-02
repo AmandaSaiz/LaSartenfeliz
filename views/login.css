@@ -154,23 +154,13 @@ body {
     font-size: .8rem;
 }
 
-.form>.alerta-error,
-.form>.alerta-exito {
+.form>.alerta-error {
     display: none;
 }
 
 .form .alertaError {
     display: block;
     background-color: #F66060;
-    padding: .5rem 1rem;
-    margin-top: 10px;
-    font-weight: 500;
-    font-size: .8rem;
-}
-
-.form .alertaExito {
-    display: block;
-    background-color: #0ca828;
     padding: .5rem 1rem;
     margin-top: 10px;
     font-weight: 500;
