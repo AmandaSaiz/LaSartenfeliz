@@ -11,7 +11,7 @@ body {
 /* Estilo de la parte de arriba del encabezado*/
 .top-header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 10px 20px;
     background-color: #4f943c;
@@ -68,6 +68,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: end;
+    margin-right: 20px;
 }
 
 .search-bar input {
@@ -95,14 +96,49 @@ body {
     background-color: #b9540c;
 }
 
-/*Login*/
-.login-icon a {
-    color: black;
-    font-size: 24px;
-    text-decoration: none;
-    margin-left: 20px;
+/* Estilo para la información del usuario */
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #b9540c;
 }
 
+.login-icon a {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.user-login {
+    border-right: 1px solid #b9540c;
+    border-left: 1px solid #b9540c;
+    background-color: #eb7c41;
+}
+
+.user-exit {
+    background-color: #eb7c41;
+    border-radius: 0 10px 10px 0;
+}
+
+.user-login:hover, .user-exit:hover {
+    background-color: white;
+}
+
+.user-info a,
+.user-info span {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.login-icon {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 /* Estilo de la parte de abajop del encabezado*/
 .bottom-header-container {
@@ -168,7 +204,7 @@ body {
     }
 
     .page-title h1 {
-        font-size: 4em; 
+        font-size: 4em;
     }
 
     .search-bar {

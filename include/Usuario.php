@@ -44,8 +44,10 @@ class Usuario extends Conexion
         }
 
         session_start();
-        $_SESSION['usuario_id'] = $usuario['id']; 
-        return true; 
+        $_SESSION['usuario_id'] = $usuario['id'];
+        $_SESSION['userName'] = $usuario['nombre'];
+        $_SESSION['userEmail'] = $usuario['email'];
+        return true;
     }
 
     public function registrarUsuario($nombre, $email, $contrasena)
@@ -69,6 +71,34 @@ class Usuario extends Conexion
             return true;
         } catch (PDOException $ex) {
             die("Error al registrar usuario: " . $ex->getMessage());
+        }
+    }
+
+    public function cambiarContrasena($usuarioId, $nuevaContrasena)
+    {
+        $contrasenaHash = password_hash($nuevaContrasena, PASSWORD_DEFAULT);
+        $consulta = "UPDATE usuarios SET contrasena = :contrasena WHERE id = :id";
+        $stmt = $this->conexion->prepare($consulta);
+
+        try {
+            $stmt->execute([':contrasena' => $contrasenaHash, ':id' => $usuarioId]);
+            return $stmt->rowCount() > 0;
+        } catch (PDOException $ex) {
+            die("Error al cambiar la contraseña: " . $ex->getMessage());
+        }
+    }
+
+    public function obtenerIdUsuario($nombreUsuario)
+    {
+        $consulta = "SELECT id FROM usuarios WHERE nombre = :nombreUsuario";
+        $stmt = $this->conexion->prepare($consulta);
+
+        try {
+            $stmt->execute([':nombreUsuario' => $nombreUsuario]);
+            $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $resultado['id'] ?? false;
+        } catch (PDOException $ex) {
+            die("Error al obtener el ID del usuario: " . $ex->getMessage());
         }
     }
 }

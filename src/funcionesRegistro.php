@@ -14,12 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($registroExitoso) {
         echo "<script>
                 alert('Te registraste correctamente, inicia sesión para aprovechar las ventajas.');
-                window.location.href = '../public/login.php';
+                window.location.href = '../public/login.html';
               </script>";
     } else {
         echo "<script>
                 alert('El usuario o correo electrónico ya están registrados. Por favor, intenta con otros datos.');
-                window.location.href = '../public/login.php';
+                window.location.href = '../public/login.html';
               </script>";
     }
 }

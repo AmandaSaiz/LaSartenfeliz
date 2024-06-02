@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../vendor/autoload.php'; 
 
 use Clases\Usuario;
@@ -18,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<script>
                 alert('El nombre de usuario o la contraseña son incorrectos. Por favor, inténtelo de nuevo.');
-                window.location.href = '../public/login.php';
+                window.location.href = '../public/login.html';
               </script>";
     }
 }

@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../views/nuevaReceta.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="../views/nuevaReceta.css?v=1.1">
     <title>La Sartén Feliz</title>
 </head>
 
 <body>
     <?php
-    session_start();
-    if (!isset($_SESSION['usuario_id'])) {
-        $_SESSION['message'] = ['type' => 'warning', 'text' => 'Debes iniciar sesión para crear una receta'];
-    }
+    // if (!isset($_SESSION['userName'])) {
+    //     echo "<script>
+    //         alert('Debes iniciar sesión para poder subir nuevas recetas a la página.');
+    //         window.location.href = 'index.php';
+    //       </script>";
+    //     exit();
+    // }
+
 
     require '../vendor/autoload.php';
     include '../src/breadcrumbs.php';
