@@ -17,7 +17,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <!-- Import de iconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="../views/header.css?v=1.4">
+    <link rel="stylesheet" type="text/css" href="../views/header.css?v=1.5">
     <title>La Sartén Feliz</title>
 
     <script src="../validaciones/validacionCierreSesion.js"></script>
@@ -78,7 +78,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
         <!-- Ruta -->
         <div class="breadcrumbs">
-            <?php if (function_exists('display_breadcrumbs')) display_breadcrumbs(); ?>
+            <?php
+            require_once('../src/breadcrumbs.php');
+            generateBreadcrumbs();
+            ?>
         </div>
         <br><br>
     </header>

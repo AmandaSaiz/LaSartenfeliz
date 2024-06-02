@@ -176,24 +176,14 @@ body {
     font-weight: lighter;
 }
 
-/*Estilo de las rutas de navegación*/
 .breadcrumbs {
-    padding: 0px 20px;
-    font-size: 10px;
-}
-
-.breadcrumbs a {
-    text-decoration: none;
-    color: #367026;
-}
-
-.breadcrumbs a:hover {
-    text-decoration: underline;
+    margin-top: 10px;
+    margin-left: 20px;
+    display:inline-flex;
 }
 
 .breadcrumbs span {
-    margin: 0 5px;
-    color: #6c757d;
+    margin-left: 5px;
 }
 
 /* Estilo responsive para pantallas más pequeñas */
