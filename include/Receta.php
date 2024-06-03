@@ -54,7 +54,6 @@ class Receta extends Conexion
                 $ingrediente_id = $this->conexion->lastInsertId();
             }
 
-            // Insertamos la relación en la tabla receta_ingredientes
             $query = "
             INSERT INTO receta_ingredientes 
                 (receta_id, ingrediente_id, cantidad, medida)
@@ -92,6 +91,65 @@ class Receta extends Conexion
                 'receta_id' => $receta_id
             ));
             return $stmt->rowCount();
+        } catch (PDOException $e) {
+            exit($e->getMessage());
+        }
+    }
+
+    public function getRecetasByCategoria($categoria)
+    {
+        $query = "
+            SELECT id, titulo, descripcion, duracion_preparacion
+            FROM recetas
+            WHERE categoria = :categoria
+            ORDER BY titulo;
+        ";
+
+        try {
+            $stmt = $this->conexion->prepare($query);
+            $stmt->execute(array('categoria' => $categoria));
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            exit($e->getMessage());
+        }
+    }
+
+    public function getRecetaById($id)
+    {
+        $query = "SELECT * FROM recetas WHERE id = :id";
+        try {
+            $stmt = $this->conexion->prepare($query);
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            exit($e->getMessage());
+        }
+    }
+
+    public function getIngredientesByRecetaId($receta_id)
+    {
+        $query = "
+            SELECT ingredientes.nombre, receta_ingredientes.cantidad, receta_ingredientes.medida
+            FROM receta_ingredientes
+            JOIN ingredientes ON receta_ingredientes.ingrediente_id = ingredientes.id
+            WHERE receta_ingredientes.receta_id = :receta_id
+        ";
+        try {
+            $stmt = $this->conexion->prepare($query);
+            $stmt->execute(['receta_id' => $receta_id]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            exit($e->getMessage());
+        }
+    }
+
+    public function getPasosByRecetaId($receta_id)
+    {
+        $query = "SELECT descripcion FROM pasos WHERE receta_id = :receta_id ORDER BY orden";
+        try {
+            $stmt = $this->conexion->prepare($query);
+            $stmt->execute(['receta_id' => $receta_id]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             exit($e->getMessage());
         }

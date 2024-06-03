@@ -8,6 +8,10 @@ function getPageName($filename)
         'contacto.php' => 'Contacto',
         'construccion.php' => 'Página en Construcción',
         'perfil.php' => 'Perfil de Usuario',
+        'entrantes.php' => 'Listado de Entrantes',
+        'platosPrincipales.php' => 'Listado de Platos Principales',
+        'postres.php' => 'Listado de Postres',
+        'cocteles.php' => 'Listado de Cócteles',
     );
 
     return isset($pageNames[$filename]) ? $pageNames[$filename] : $filename;

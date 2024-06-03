@@ -37,20 +37,20 @@ include '../src/header.php';
             <h2>A continuación puedes explorar algunas de nuestras categorías de recetas.</h2>
             <div class="recipe-categories">
                 <div class="category">
-                    <a href="construccion.php"><img src="../recursos/entrantes.png" alt="Entrantes"></a>
-                    <a href="construccion.php">Entrantes</a>
+                    <a href="entrantes.php"><img src="../recursos/entrantes.png" alt="Entrantes"></a>
+                    <a href="entrantes.php">Entrantes</a>
                 </div>
                 <div class="category">
-                    <a href="construccion.php"><img src="../recursos/plato-principal.png" alt="Platos Principales"></a>
-                    <a href="construccion.php">Platos Principales</a>
+                    <a href="platosPrincipales.php"><img src="../recursos/plato-principal.png" alt="Platos Principales"></a>
+                    <a href="platosPrincipales.php">Platos Principales</a>
                 </div>
                 <div class="category">
-                    <a href="construccion.php"><img src="../recursos/postres.png" alt="Postres"></a>
-                    <a href="construccion.php">Postres</a>
+                    <a href="postres.php"><img src="../recursos/postres.png" alt="Postres"></a>
+                    <a href="postres.php">Postres</a>
                 </div>
                 <div class="category">
-                    <a href="construccion.php"><img src="../recursos/coctel.png" alt="Coctelería"></a>
-                    <a href="construccion.php">Coctelería</a>
+                    <a href="cocteles.php"><img src="../recursos/coctel.png" alt="Coctelería"></a>
+                    <a href="cocteles.php">Coctelería</a>
                 </div>
             </div>
         </div>
