@@ -1,7 +1,5 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 .recipe-details {
@@ -68,6 +66,51 @@ body {
     padding: 10px;
     margin-top: 10px;
 }
+
+/* Estilos de la sección de comentarios */
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment-section textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.comment-section button {
+    background-color: #4f943c;
+    color: white;
+    border: none;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.comments-list {
+    margin-top: 30px;
+}
+
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-author {
+    font-weight: bold;
+}
+
+.comment-content {
+    margin-top: 5px;
+}
+
+.comment-date {
+    font-size: 10px;
+    color: #888;
+}
+
 
 @media (max-width: 600px) {
     .recipe-columns {

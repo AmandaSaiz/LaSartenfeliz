@@ -154,4 +154,45 @@ class Receta extends Conexion
             exit($e->getMessage());
         }
     }
+
+    public function insertComentario($contenido, $usuario_id, $receta_id)
+    {
+        $query = "
+            INSERT INTO comentarios 
+                (contenido, usuario_id, receta_id)
+            VALUES
+                (:contenido, :usuario_id, :receta_id);
+        ";
+
+        try {
+            $stmt = $this->conexion->prepare($query);
+            $stmt->execute(array(
+                'contenido' => $contenido,
+                'usuario_id' => $usuario_id,
+                'receta_id' => $receta_id
+            ));
+            return $this->conexion->lastInsertId();
+        } catch (PDOException $e) {
+            exit($e->getMessage());
+        }
+    }
+
+    public function getComentariosByRecetaId($receta_id)
+    {
+        $query = "
+            SELECT comentarios.contenido, comentarios.fecha, usuarios.nombre AS autor
+            FROM comentarios
+            JOIN usuarios ON comentarios.usuario_id = usuarios.id
+            WHERE comentarios.receta_id = :receta_id
+            ORDER BY comentarios.fecha DESC;
+        ";
+
+        try {
+            $stmt = $this->conexion->prepare($query);
+            $stmt->execute(array('receta_id' => $receta_id));
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            exit($e->getMessage());
+        }
+    }
 }
