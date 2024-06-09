@@ -1,4 +1,6 @@
 <?php
+// Esta función (migas de pan) permite mostrar el lugar en el que nos necontramos en cada momento.
+
 function getPageName($filename)
 {
     $pageNames = array(
@@ -25,13 +27,10 @@ function generateBreadcrumbs()
 
     if ($paginaActual !== 'index.php') {
         $breadcrumbs .= '<a href="index.php"><span>Inicio</span></a>';
-    } else {
-        $breadcrumbs .= '<span>Inicio</span>';
-    }
-
-    if ($paginaActual !== 'index.php') {
         $pageTitle = getPageName($paginaActual);
         $breadcrumbs .= " <span>&gt; $pageTitle</span>";
+    } else {
+        $breadcrumbs .= '<span>Inicio</span>';
     }
 
     echo $breadcrumbs;

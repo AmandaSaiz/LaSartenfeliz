@@ -11,6 +11,7 @@
 <body>
     <br><br>
     <footer>
+        <!-- Plantilla del footer de la página -->
         <div class="top-footer">
             <div class="div-left">
                 <a href="login.html">Registrate</a>

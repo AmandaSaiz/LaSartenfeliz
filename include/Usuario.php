@@ -5,6 +5,8 @@ namespace Clases;
 use PDO;
 use PDOException;
 
+/* Clase que hereda de Conexion y realiza todas las peticiones sql relacionadas con los usuarios */ 
+
 class Usuario extends Conexion
 {
     public function __construct()

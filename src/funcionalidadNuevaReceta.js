@@ -1,4 +1,4 @@
-// Función para agregar un nuevo campo de ingrediente al formulario de forma dinámica
+/** Función para agregar un nuevo campo de ingrediente al formulario de forma dinámica */
 function agregarIngrediente() {
     var ingredienteDiv = document.createElement('div');
     ingredienteDiv.classList.add('ingrediente');
@@ -42,7 +42,7 @@ function agregarIngrediente() {
     document.getElementById('ingredientes').appendChild(ingredienteDiv);
 }
 
-// Función para agregar un nuevo paso en el formulario
+/** Función para agregar un nuevo paso en el formulario */
 function agregarPaso() {
     var pasoDiv = document.createElement('div');
     pasoDiv.classList.add('paso');

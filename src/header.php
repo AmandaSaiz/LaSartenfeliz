@@ -24,6 +24,7 @@ if (session_status() == PHP_SESSION_NONE) {
 </head>
 
 <body>
+    <!-- Plantilla del encabezado de la página -->
     <header>
         <!-- Parte superior del encabezado -->
         <div class="top-header-container">

@@ -4,6 +4,7 @@ require '../vendor/autoload.php';
 
 use Clases\Usuario;
 
+/** Funcion para la obtención de los datos del usuario de login y el inicio de sesión */
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = trim($_POST['userName']);
     $contrasena = trim($_POST['userPassword']);

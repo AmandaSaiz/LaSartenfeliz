@@ -3,6 +3,7 @@ require '../vendor/autoload.php';
 
 use Clases\Usuario;
 
+/** Función para la obtención de los datos de usuario del formulario y la realización del registro */
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = trim($_POST['userName']);
     $email = trim($_POST['userEmail']);

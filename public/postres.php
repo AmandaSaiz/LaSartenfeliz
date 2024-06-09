@@ -19,7 +19,7 @@ $postres = $receta->getRecetasByCategoria('postre');
 </head>
 
 <body>
-
+    <!-- Lista de recetas de Postres -->
     <main class="category-list">
         <h1 class="category-title">Postres</h1>
         <ul class="recipes">

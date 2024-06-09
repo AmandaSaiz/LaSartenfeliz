@@ -23,6 +23,7 @@
     }
     ?>
     <main>
+        <!-- Formulario para la inclusión de nuevas recetas -->
         <div id="message-container"></div>
         <form action="../src/creacionReceta.php" method="POST">
             <h1>Nueva Receta</h1>

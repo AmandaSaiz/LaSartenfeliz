@@ -5,6 +5,8 @@ namespace Clases;
 use PDO;
 use PDOException;
 
+/* Clase que hereda de Conexion y realiza todas las peticiones sql relacionadas con las recetas a la  base de datos */
+
 class Receta extends Conexion
 {
     public function __construct()

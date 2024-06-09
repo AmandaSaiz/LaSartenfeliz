@@ -12,8 +12,7 @@ if (!isset($_SESSION['userName'])) {
           </script>";
     exit();
 }
-
-
+//Obtención de los datos del usuario
 $userName = htmlspecialchars($_SESSION['userName']);
 $userEmail = htmlspecialchars($_SESSION['userEmail']);
 ?>
@@ -29,6 +28,7 @@ $userEmail = htmlspecialchars($_SESSION['userEmail']);
 
 <body>
     <main>
+        <!-- Información del usuario que ha iniciado sesión -->
         <div class="profile-container">
             <form class="profile-form" action="../src/cambioContrasena.php" method="post">
                 <h1>Perfil de Usuario</h1>

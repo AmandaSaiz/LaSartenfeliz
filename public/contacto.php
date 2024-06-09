@@ -16,6 +16,7 @@
     ?>
 
     <main>
+    <!-- Formulario para permitir al usuario contactar conmigo - EN CONSTRUCCION -->
         <section class="contact-form-container">
             <h2>Contacto</h2>
             <form action="#" method="post">

@@ -1,3 +1,4 @@
+/** Función para la validación de los campos del formulario de nueva receta */
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
 

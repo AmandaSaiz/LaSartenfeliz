@@ -5,7 +5,7 @@ namespace Clases;
 use PDO;
 use PDOException;
 
-/* Clase que realiza la conexión a la base de datos */
+/* Clase con la conexión a la base de datos del proyecto */
 
 class Conexion
 {

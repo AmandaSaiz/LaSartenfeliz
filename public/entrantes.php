@@ -19,7 +19,7 @@ $entrantes = $receta->getRecetasByCategoria('entrantes');
 </head>
 
 <body>
-
+    <!-- Lista de recetas de Entrantes -->
     <main class="category-list">
         <h1 class="category-title">Entrantes</h1>
         <ul class="recipes">

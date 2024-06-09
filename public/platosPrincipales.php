@@ -19,7 +19,7 @@ $platosPrincipales = $receta->getRecetasByCategoria('plato principal');
 </head>
 
 <body>
-
+    <!-- Lista de recetas de Platos Principales -->
     <main class="category-list">
         <h1 class="category-title">Platos principales</h1>
         <ul class="recipes">

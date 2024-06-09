@@ -19,7 +19,7 @@ $cocteles = $receta->getRecetasByCategoria('coctel');
 </head>
 
 <body>
-
+    <!-- Lista de recetas de Cocteles -->
     <main class="category-list">
         <h1 class="category-title">Cócteles</h1>
         <ul class="recipes">

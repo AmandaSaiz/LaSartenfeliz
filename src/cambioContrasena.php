@@ -5,6 +5,7 @@ use Clases\Usuario;
 
 session_start();
 
+/* Función para el cambio de contraseña de los usuarios */
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userName = $_SESSION['userName'];
     $newPassword = trim($_POST['newPassword']);

@@ -1,3 +1,4 @@
+/** Funciones para la validación de los datos del registro de nuevo usuario */
 document.querySelector('.form-register').addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -32,6 +33,7 @@ document.querySelector('.form-register').addEventListener('submit', function(eve
   }
 });
 
+// Esta función muestra los mensajes de error por pantalla
 function showError(input, message) {
   const errorElement = document.createElement('div');
   errorElement.classList.add('alertaError');
@@ -41,6 +43,7 @@ function showError(input, message) {
   input.parentNode.appendChild(errorElement);
 }
 
+// Esta función elimina los mensajes de error cuando el usuario introduce bien los datos
 function clearErrors() {
   const errorElements = document.querySelectorAll('.alertaError');
   errorElements.forEach(element => element.remove());
