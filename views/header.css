@@ -11,7 +11,7 @@ body {
 /* Estilo de la parte de arriba del encabezado*/
 .top-header-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #4f943c;
@@ -19,9 +19,16 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo para las secciones izquierda y derecha */
+.left-section, .right-section {
+    display: flex;
+    align-items: center;
+}
+
 /*Menú de navegación desplegable*/
 .menu-icon {
     position: relative;
+    margin-right: 10px;
 }
 
 .menu-icon i {
@@ -29,19 +36,19 @@ body {
     cursor: pointer;
 }
 
-.menu-icon:hover .dropdown-menu {
+.menu-icon .dropdown-menu {
+    display: none;
+}
+
+.menu-icon .dropdown-menu.show {
     display: block;
 }
 
 .dropdown-menu {
-    display: none;
     position: absolute;
-    top: 40px;
-    left: 0;
-    background-color: white;
-    border: #367026;
+    background-color: #f1f1f1;
+    border: 1px solid #4f943c;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
 }
 
 .dropdown-menu ul {
@@ -60,15 +67,18 @@ body {
 }
 
 .dropdown-menu ul li a:hover {
-    background-color: #f1f1f1;
+    background-color: #95d683;
+    padding: 2%;
+}
+
+/* Nueva columna */
+.aside-column {
+    border-top: 1px solid #4f943c;
 }
 
 /*Barra de búsqueda*/
-.search-bar {
+.search-bar form {
     display: flex;
-    width: 100%;
-    justify-content: end;
-    margin-right: 20px;
 }
 
 .search-bar input {
@@ -81,7 +91,6 @@ body {
 .search-bar button {
     padding: 5px 10px;
     border: 1px solid #bd5c16;
-    border-left: none;
     background-color: #ed7737;
     color: black;
     border-radius: 0 4px 4px 0;
@@ -103,6 +112,7 @@ body {
     background-color: white;
     border-radius: 10px;
     border: 1px solid #b9540c;
+    margin-left: 20px;
 }
 
 .login-icon a {

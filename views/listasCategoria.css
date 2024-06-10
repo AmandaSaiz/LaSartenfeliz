@@ -48,6 +48,18 @@ body {
     color: #999999;
 }
 
+/* Estilos para la lista de resultados */
+.search-results {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+}
+
 
 @media (max-width: 600px) {
     .category-title {

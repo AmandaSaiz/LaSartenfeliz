@@ -197,4 +197,30 @@ class Receta extends Conexion
             exit($e->getMessage());
         }
     }
+
+    public function buscarRecetas($query)
+    {
+        // Los % alrededor del query permiten que puedan buscarse coincidencias parciales
+        $query = "%$query%";
+
+        $sql = "
+            SELECT DISTINCT recetas.*
+            FROM recetas
+            LEFT JOIN receta_ingredientes ON recetas.id = receta_ingredientes.receta_id
+            LEFT JOIN ingredientes ON receta_ingredientes.ingrediente_id = ingredientes.id
+            WHERE recetas.titulo LIKE :query 
+            OR recetas.descripcion LIKE :query 
+            OR recetas.categoria LIKE :query 
+            OR ingredientes.nombre LIKE :query
+        ";
+
+        try {
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->bindParam(':query', $query, PDO::PARAM_STR);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            exit($e->getMessage());
+        }
+    }
 }

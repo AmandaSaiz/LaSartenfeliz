@@ -17,7 +17,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <!-- Import de iconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="../views/header.css?v=1.5">
+    <link rel="stylesheet" type="text/css" href="../views/header.css?v=1.10">
     <title>La Sartén Feliz</title>
 
     <script src="../validaciones/validacionCierreSesion.js"></script>
@@ -28,45 +28,57 @@ if (session_status() == PHP_SESSION_NONE) {
     <header>
         <!-- Parte superior del encabezado -->
         <div class="top-header-container">
-            <div class="menu-icon">
-                <i class='bx bx-menu'></i>
-                <nav class="dropdown-menu">
-                    <ul>
-                        <li><a href="construccion.php"></a>Entrantes</li>
-                        <li><a href="construccion.php"></a>Platos principales</li>
-                        <li><a href="construccion.php"></a>Postres</li>
-                        <li><a href="construccion.php"></a>Cócteles</li>
-                    </ul>
-                </nav>
+            <div class="left-section">
+                <div class="menu-icon">
+                    <i class='bx bx-menu'></i>
+                    <nav class="dropdown-menu">
+                        <ul>
+                            <li><a href="entrantes.php">Entrantes</a></li>
+                            <li><a href="platosPrincipales.php">Platos principales</a></li>
+                            <li><a href="postres.php">Postres</a></li>
+                            <li><a href="cocteles.php">Cócteles</a></li>
+                        </ul>
+                        <div class="aside-column">
+                            <ul>
+                                <li><a href="nuevaReceta.php">Añadir receta</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="logo">
+                    <a href="index.php"><img src="../recursos/logo.png" alt="Logo de la Sartén Feliz"></a>
+                </div>
             </div>
 
-            <div class="logo">
-                <a href="index.php"><img src="../recursos/logo.png" alt="Logo de la Sartén Feliz"></a>
-            </div>
 
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
-                <button><i class='bx bx-search'></i></button>
-            </div>
+            <div class="right-section">
+                <div class="search-bar">
+                    <form action="resultadosBusqueda.php" method="GET">
+                        <input type="text" name="query" placeholder="Buscar...">
+                        <button type="submit"><i class='bx bx-search'></i></button>
+                    </form>
+                </div>
 
-            <div class="login-icon">
-                <?php
-                if (isset($_SESSION['userName'])) {
-                    echo '<div class="user-info">';
-                    echo '<div class="user-name">';
-                    echo '<span>' . htmlspecialchars($_SESSION['userName']) . '</span>';
-                    echo '</div>';
-                    echo '<div class="user-login">';
-                    echo '<a href="perfil.php"><i class="bx bx-user"></i></a>';
-                    echo '</div>';
-                    echo '<div class="user-exit">';
-                    echo '<a href="../src/cerrarSesion.php" onclick="return confirmarCierreSesion()"><i class="bx bx-log-out"></i></a>';
-                    echo '</div>';
-                    echo '</div>';
-                } else {
-                    echo '<a href="login.html"><i class="bx bx-user"></i></a>';
-                }
-                ?>
+                <div class="login-icon">
+                    <?php
+                    if (isset($_SESSION['userName'])) {
+                        echo '<div class="user-info">';
+                        echo '<div class="user-name">';
+                        echo '<span>' . htmlspecialchars($_SESSION['userName']) . '</span>';
+                        echo '</div>';
+                        echo '<div class="user-login">';
+                        echo '<a href="perfil.php"><i class="bx bx-user"></i></a>';
+                        echo '</div>';
+                        echo '<div class="user-exit">';
+                        echo '<a href="../src/cerrarSesion.php" onclick="return confirmarCierreSesion()"><i class="bx bx-log-out"></i></a>';
+                        echo '</div>';
+                        echo '</div>';
+                    } else {
+                        echo '<a href="login.html"><i class="bx bx-user"></i></a>';
+                    }
+                    ?>
+                </div>
             </div>
         </div>
 
@@ -85,6 +97,7 @@ if (session_status() == PHP_SESSION_NONE) {
             ?>
         </div>
         <br><br>
+        <script src="../src/funcionalidadDesplegable.js"></script>
     </header>
 </body>
 
